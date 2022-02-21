@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+  --light-coral: #f08080;
+  --congo-pink: #f4978e;
+  --melon: #f8ad9d;
+  --apricot: #fbc4ab;
+  --peach-puff: #ffdab9;
+  --text-color: #2b2d42;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  background: var(--peach-puff);
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  padding: 20px 0;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background: var(--light-coral);
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button {
+  font-size: 1.8rem;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  cursor: pointer;
+  background: var(--apricot);
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background: hsl(19, 91%, 78%);
+}
+
+#header {
+  background: rgba(244, 151, 142, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgb(244, 151, 142);
+  height: 70px;
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+}
+
+#header > .flex {
+  justify-content: space-between;
+}
+
+#header-img {
+  display: block;
+  max-width: 280px;
+  height: auto;
+}
+
+#nav-bar ul {
+  display: flex;
+}
+
+#nav-bar ul li {
+  font-size: 1.8rem;
+  padding: 10px 20px;
+}
+
+#nav-bar ul li a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+#nav-bar ul li a::before,
+#nav-bar ul li a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2.5px;
+  background: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+#nav-bar ul li a:hover::before {
+  width: 50%;
+  left: 0;
+}
+
+#nav-bar ul li a:hover::after {
+  width: 50%;
+}
+
+#head {
+  padding: 70px 0;
+  height: 100vh;
+  text-align: center;
+}
+
+#head > .flex {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#head .card {
+  position: relative;
+  width: 420px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#head .card h2 {
+  padding: 25px 0;
+}
+
+#head #form {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+}
+
+#head .card .flex {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#head #form input[type="email"] {
+  font-size: 1.8rem;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  outline: none;
+  transition: box-shadow 0.1s ease;
+}
+
+#head #form input[type="email"]:focus {
+  box-shadow: 0 0 0 2px var(--text-color);
+}
+
+#head #form input[type="submit"] {
+  margin-top: 20px;
+}
+
+#features {
+  padding: 100px 100px 30px;
+  height: 100vh;
+  text-align: center;
+}
+
+#features .container {
+  height: 100%;
+}
+
+#features .container > h2 {
+  font-size: 4.5rem;
+}
+
+#features .grid {
+  grid-template-columns: 7rem auto;
+}
+
+#features .features-content {
+  height: calc(100% / 3);
+  text-align: start;
+}
+
+#features .features-content i {
+  font-size: 5rem;
+}
+
+#features .features-text p {
+  font-size: 1.8rem;
+  padding: 10px 0;
+}
+
+#hiw {
+  padding: 100px 0 30px;
+  height: 100vh;
+}
+
+#hiw .container {
+  height: 100%;
+  position: relative;
+}
+
+#hiw .flex {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#hiw .video-div h2 {
+  font-size: 4.5rem;
+}
+
+#hiw .video-div iframe {
+  max-width: 90%;
+}
+
+#hiw .video-div {
+  background: rgba(240, 128, 128, 0.25);
+  backdrop-filter: blur(4px);
+  border-radius: 30px;
+  border: 1px solid rgba(240, 128, 128, 0.75);
+}
+
+#hiw .glass-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #db524c, #faecfd);
+  z-index: -1;
+}
+
+#hiw .glass-circle:nth-child(1) {
+  left: 150px;
+  top: 50px;
+}
+
+#hiw .glass-circle:nth-child(2) {
+  bottom: -20px;
+  right: 70px;
+  width: 150px;
+  height: 150px;
+}
+
+#hiw .glass-circle:nth-child(3) {
+  right: 100px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+#pricing {
+  padding: 85px 0 30px;
+  height: 85vh;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 4.5rem;
+}
+
+#pricing .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#pricing .flex {
+  flex-direction: column;
+}
+
+#pricing .card {
+  width: 300px;
+  height: 370px;
+  padding: 0 20px;
+}
+
+#pricing .card .card-title {
+  font-size: 2.3rem;
+  padding: 30px 0 0;
+  flex-grow: 1;
+}
+
+#pricing .card .price {
+  flex-grow: 1;
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+#pricing .card .card-text {
+  flex-grow: 5;
+  font-size: 1.5rem;
+}
+
+#pricing .card button {
+  margin: 0 0 35px;
+  width: 200px;
+}
+
+#footer {
+  height: 15vh;
+  font-size: 1.6rem;
+}
+
+#footer ul li {
+  padding: 0 20px;
+}
+
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    height: 120px;
+  }
+
+  #header > .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header-img {
+    padding: 10px 0;
+  }
+
+  #nav-bar {
+    background: rgba(240, 128, 128, 0.3);
+    border-radius: 10px;
+  }
+
+  #head {
+    height: auto;
+    padding: 110px 0;
+  }
+
+  #head h1 {
+    margin: 20px 0;
+  }
+
+  #features {
+    height: auto;
+    padding: 140px 0 0;
+  }
+
+  #features .container > h2 {
+    padding: 40px 0;
+  }
+
+  #features .features-content {
+    margin: 50px 0;
+  }
+
+  #hiw {
+    padding: 140px 0 0;
+  }
+
+  #pricing {
+    padding: 140px 0 30px;
+    height: auto;
+  }
+
+  #pricing h2 {
+    padding: 40px 0;
+  }
+
+  #pricing .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #pricing .card {
+    margin: 15px 0;
+  }
+
+  #footer ul li {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  #nav-bar ul li {
+    padding: 10px;
+    font-size: 1.7rem;
+  }
+
+  #head .card {
+    width: 300px;
+    height: 280px;
+  }
+
+  #head .card h2 {
+    font-size: 2.5rem;
+  }
+
+  #head #form input[type="email"] {
+    width: 80%;
+  }
+
+  #features .container > h2 {
+    font-size: 3.5rem;
+    padding: 20px 0;
+  }
+
+  #features .container .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #features .features-text h2 {
+    font-size: 2.5rem;
+  }
+
+  #feautures .features-text p {
+    font-size: 1.7rem;
+  }
+
+  #hiw .video-div h2 {
+    font-size: 3.5rem;
+  }
+
+  #hiw .glass-circle:nth-child(1) {
+    display: none;
+  }
+
+  #hiw .glass-circle:nth-child(2) {
+    left: 10px;
+  }
+
+  #pricing h2 {
+    font-size: 3.5rem;
+    padding: 10px 0 40px;
+  }
+
+  #footer {
+    height: auto;
+    padding: 20px 0 30px;
+  }
+
+  #footer .grid {
+    grid-template-columns: 1fr;
+  }
+}
